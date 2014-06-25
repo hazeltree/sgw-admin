@@ -2,7 +2,6 @@
 
 <h1>Customers</h1>
 
-
 <div class="header">
   <div class="row">
     <div class="small-4 columns">
@@ -17,31 +16,30 @@
   </div>
 </div>
 
-{{#each customer in model itemController="customer"}}
+{{#each}}
 <!--{{californian}}-->
-
-<div class="customer" {{action 'toggle' true}} {{bind-attr class="toggle:open"}}>
+<div class="customer" {{action toggleActive controller}} {{bind-attr class="controller.isActive:open"}}>
   <div class="row summary">
     <div class="small-4 columns">
-      <span class="name">{{customer.firstName}} {{customer.lastName}}</span>
+      <span class="name">{{this.firstName}} {{this.lastName}}</span>
     </div>
     <div class="small-4 columns">
-      {{customer.primaryPhone}}{{#if customer.alternatePhone}} (alt {{customer.alternatePhone}}){{/if}}
+      {{this.primaryPhone}}{{#if this.alternatePhone}} (alt {{this.alternatePhone}}){{/if}}
     </div>
     <div class="small-4 columns">
-      {{customer.email}}
+      {{this.email}}
     </div>
     <!--ORDERS-->
   </div>
-  {{#if toggle}}
+  {{#if controller.isActive}}
   <div class="row detail">
     <div class="small-6 columns">
       <div class="label">
       <div class="title">Shipping Address</div>
       <div class="address">      
-      {{#if customer.companyName}}{{customer.companyName}}{{else}}{{customer.fullName}}{{/if}}<br>
-      {{customer.shippingAddress.street}}<br>
-      {{customer.shippingAddress.city}}, {{customer.shippingAddress.state}} {{customer.shippingAddress.zip}}
+      {{#if this.companyName}}{{this.companyName}}{{else}}{{this.fullName}}{{/if}}<br>
+      {{this.shippingAddress.street}}<br>
+      {{this.shippingAddress.city}}, {{this.shippingAddress.state}} {{this.shippingAddress.zip}}
       </div>
       </div>
     </div>
@@ -49,16 +47,15 @@
       <div class="label">
       <div class="title">Billing Address</div>
       <div class="address">
-      {{customer.fullName}}<br>
-      {{customer.billingAddress.street}}<br>
-      {{customer.billingAddress.city}}, {{customer.billingAddress.state}} {{customer.billingAddress.zip}}
+      {{this.fullName}}<br>
+      {{this.billingAddress.street}}<br>
+      {{this.billingAddress.city}}, {{this.billingAddress.state}} {{this.billingAddress.zip}}
       </div>
       </div>
     </div>
   </div>
   {{/if}}
-  <div {{bind-attr class=":toggle controller.toggle:icon-arrow-down:icon-arrow-up"}}>
-  </div>
+  <div {{bind-attr class=":toggle controller.isActive:icon-arrow-down:icon-arrow-up"}}></div>
 </div>
 {{/each}}
 
