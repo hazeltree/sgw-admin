@@ -1,0 +1,1 @@
+SgwAdmin.ApplicationAdapter = DS.FixtureAdapter;

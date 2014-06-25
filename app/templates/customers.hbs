@@ -1,0 +1,66 @@
+<div id="customers">
+
+<h1>Customers</h1>
+
+
+<div class="header">
+  <div class="row">
+    <div class="small-4 columns">
+      <span>Name</span>
+    </div>
+    <div class="small-4 columns">
+      <span>Phone</span>
+    </div>
+    <div class="small-4 columns">
+      <span>Email</span>
+    </div>
+  </div>
+</div>
+
+{{#each customer in model itemController="customer"}}
+<!--{{californian}}-->
+
+<div class="customer" {{action 'toggle' true}} {{bind-attr class="toggle:open"}}>
+  <div class="row summary">
+    <div class="small-4 columns">
+      <span class="name">{{customer.firstName}} {{customer.lastName}}</span>
+    </div>
+    <div class="small-4 columns">
+      {{customer.primaryPhone}}{{#if customer.alternatePhone}} (alt {{customer.alternatePhone}}){{/if}}
+    </div>
+    <div class="small-4 columns">
+      {{customer.email}}
+    </div>
+    <!--ORDERS-->
+  </div>
+  {{#if toggle}}
+  <div class="row detail">
+    <div class="small-6 columns">
+      <div class="label">
+      <div class="title">Shipping Address</div>
+      <div class="address">      
+      {{#if customer.companyName}}{{customer.companyName}}{{else}}{{customer.fullName}}{{/if}}<br>
+      {{customer.shippingAddress.street}}<br>
+      {{customer.shippingAddress.city}}, {{customer.shippingAddress.state}} {{customer.shippingAddress.zip}}
+      </div>
+      </div>
+    </div>
+    <div class="small-6 columns">
+      <div class="label">
+      <div class="title">Billing Address</div>
+      <div class="address">
+      {{customer.fullName}}<br>
+      {{customer.billingAddress.street}}<br>
+      {{customer.billingAddress.city}}, {{customer.billingAddress.state}} {{customer.billingAddress.zip}}
+      </div>
+      </div>
+    </div>
+  </div>
+  {{/if}}
+  <div {{bind-attr class=":toggle controller.toggle:icon-arrow-down:icon-arrow-up"}}>
+  </div>
+</div>
+{{/each}}
+
+
+</div>
