@@ -1,4 +1,5 @@
 SgwAdmin.Order = DS.Model.extend({
+  client: DS.belongsTo('client'),
   size: function(){
     return this.get('height') + '" x ' + this.get('width') + '"';
   }.property(),
@@ -13,11 +14,13 @@ SgwAdmin.Order = DS.Model.extend({
   totalCost: DS.attr('number'),
   deposit: DS.attr('number'),
   balance: DS.attr('number'),
+  date: DS.attr('date')
 });
 
 SgwAdmin.Order.FIXTURES = [
   {
     id: 1,
+    client: 1,
     height: 34,
     width: 50,
     privacy: false,
@@ -29,9 +32,11 @@ SgwAdmin.Order.FIXTURES = [
     totalCost: 1145,
     deposit: 573,
     balance: 572,
+    date: 1403711794685
   },
   {
     id: 2,
+    client: 2,
     height: 24,
     width: 24,
     privacy: true,
@@ -43,5 +48,6 @@ SgwAdmin.Order.FIXTURES = [
     totalCost: 349.99,
     deposit: 349.99,
     balance: 0,
+    date: 1403711794685
   }
 ];

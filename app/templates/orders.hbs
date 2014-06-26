@@ -1,0 +1,38 @@
+<div id="orders">
+
+<div class="table-header">
+  <div class="row">
+    <div class="small-2 columns">
+      ID
+    </div>
+    <div class="small-4 columns">
+      Client
+    </div>
+    <div class="small-3 columns">
+      Total
+    </div>
+    <div class="small-3 columns">
+      Date
+    </div>
+  </div>
+</div>
+
+{{#each}}
+<div class="table-row">
+    <div class="small-2 columns">
+      {{id}}
+    </div>
+    <div class="small-4 columns">
+      {{client.fullName}}
+    </div>
+    <div class="small-3 columns">
+      ${{totalCost}}
+    </div>
+    <div class="small-3 columns">
+      {{format-date date}}
+    </div>
+</div>
+
+{{/each}}
+
+</div>

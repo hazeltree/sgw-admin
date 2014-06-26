@@ -8,3 +8,8 @@ require('scripts/routes/*');
 require('scripts/components/*');
 require('scripts/views/*');
 require('scripts/router');
+require('bower_components/moment/moment');
+
+Ember.Handlebars.helper('format-date', function(date) {
+  return moment(date).format('L');
+});

@@ -6,6 +6,8 @@ $icon-font-path: "../styles/fonts/"; // Change the path to the fonts
 #nav {
   position: absolute;
   left: 0;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,.5);
+  z-index: 1;
   top: 0;
   bottom: 0;
   background: rgb(72,76,83); /* Old browsers */
@@ -18,21 +20,27 @@ $icon-font-path: "../styles/fonts/"; // Change the path to the fonts
   background: -ms-linear-gradient(top,  rgba(72,76,83,1) 0%,rgba(53,56,63,1) 100%); /* IE10+ */
   background: linear-gradient(to bottom,  rgba(72,76,83,1) 0%,rgba(53,56,63,1) 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#484c53', endColorstr='#35383f',GradientType=0 ); /* IE6-8 */
-  padding-top: 16px;
+  padding-top: 10px;
   i {
+    font-size: 12px;
+    text-align: center;
     color: white;
-    width: 64px;
-    height: 64px;
+    width: 80px;
     display: block;
+    padding: 10px 0;
     &:before {
-      font-size: 32px;
-      width: 64px;
-      height: 36px;
+      font-size: 36px;
+      width: 80px;
+      margin-bottom: 3px;
       text-align: center;
-      display: inline-block;
+      display: block;
+    }
+    &.active {
+      color: #61cef2!important;
+      cursor: default!important;
     }
     &:hover {
-      color: #61cef2;
+      color: #9AE4FE;
       cursor: pointer;
     }    
   }
@@ -40,24 +48,26 @@ $icon-font-path: "../styles/fonts/"; // Change the path to the fonts
 }
 
 #outlet {
-  margin-left: 64px;
-  padding: 0 64px;
+  margin-left: 80px;
+  padding: 0 /*64px*/;
+}
+
+
+.table-header {
+  background: #484b52;
+  color: white;
+  padding: 16px 0;
+}
+
+.table-row {
+  cursor: pointer;
+  padding: 16px 0;
 }
 
 #customers {
-
-  .header {
-    background: #646464;
-    color: white;
-    span {
-      padding: 10px 0;
-      display: inline-block;
-    }
-  }
   .name {
     font-family: 'Volkhov';
     font-weight: 700;
-    font-size: 22px;   
     color: rgb(100,100,100);
   }
   .company {
@@ -69,7 +79,7 @@ $icon-font-path: "../styles/fonts/"; // Change the path to the fonts
   .customer {
     width: 100%;
     border: solid rgb(200,200,200);
-    border-width: 0px 1px 1px;
+    border-width: 0px 0px 1px;
     padding: 0px 0px 0px 0px;
     position: relative;
     &:first-of-type {
@@ -80,12 +90,8 @@ $icon-font-path: "../styles/fonts/"; // Change the path to the fonts
       background: rgba(0,0,0,.05)  ;
     }
     &.open .summary{
-      background: #61cef2;
+      background: #9AE4FE;
     }
-  }
-  .summary {
-    cursor: pointer;
-    padding: 20px 0;
   }
   .detail {
     padding-bottom: 20px;    

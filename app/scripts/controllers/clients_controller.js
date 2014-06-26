@@ -1,6 +1,6 @@
-SgwAdmin.CustomersController = Ember.ArrayController.extend({
+SgwAdmin.ClientsController = Ember.ArrayController.extend({
   // Implement your controller here.
-  itemController: 'customer',
+  itemController: 'client',
   activeItem: Ember.reduceComputed('@this.@each.isActive', {
     initialValue: null,
 

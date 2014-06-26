@@ -1,4 +1,4 @@
-SgwAdmin.Customer = DS.Model.extend({
+SgwAdmin.Client = DS.Model.extend({
   firstName: DS.attr('string'),
   lastName: DS.attr('string'),
   primaryPhone: DS.attr('string'),
@@ -14,7 +14,7 @@ SgwAdmin.Customer = DS.Model.extend({
   }.property('firstName','lastName')
 });
 
-SgwAdmin.Customer.FIXTURES = [
+SgwAdmin.Client.FIXTURES = [
   {
     id: 1,
     firstName: 'Christine',

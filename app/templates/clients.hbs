@@ -1,9 +1,6 @@
 <div id="customers">
 
-<h1>Customers</h1>
-
-<div class="header">
-  <div class="row">
+<div class="table-header row">
     <div class="small-4 columns">
       <span>Name</span>
     </div>
@@ -13,13 +10,12 @@
     <div class="small-4 columns">
       <span>Email</span>
     </div>
-  </div>
 </div>
 
 {{#each}}
 <!--{{californian}}-->
 <div class="customer" {{action toggleActive controller}} {{bind-attr class="controller.isActive:open"}}>
-  <div class="row summary">
+  <div class="summary row table-row">
     <div class="small-4 columns">
       <span class="name">{{this.firstName}} {{this.lastName}}</span>
     </div>
@@ -55,7 +51,7 @@
     </div>
   </div>
   {{/if}}
-  <div {{bind-attr class=":toggle controller.isActive:icon-arrow-down:icon-arrow-up"}}></div>
+  <div {{bind-attr class=":toggle controller.isActive:icon-arrow-up:icon-arrow-down"}}></div>
 </div>
 {{/each}}
 

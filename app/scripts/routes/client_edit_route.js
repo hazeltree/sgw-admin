@@ -1,4 +1,4 @@
-SgwAdmin.CustomerEditRoute = Ember.Route.extend({
+SgwAdmin.ClientEditRoute = Ember.Route.extend({
   model: function(params) {
     return this.get('store').find('customer', this.modelFor('customer').id);
   },
