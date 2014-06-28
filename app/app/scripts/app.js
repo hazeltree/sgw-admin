@@ -1,4 +1,4 @@
-var SgwAdmin = window.SgwAdmin = Ember.Application.create();
+var App = window.App = Ember.Application.create();
 
 /* Order and include as you please. */
 require('scripts/controllers/*');
@@ -8,8 +8,3 @@ require('scripts/routes/*');
 require('scripts/components/*');
 require('scripts/views/*');
 require('scripts/router');
-require('../bower_components/moment/moment');
-
-Ember.Handlebars.helper('format-date', function(date) {
-  return 'k';//moment(date).format('L');
-});

@@ -1,3 +1,3 @@
-SgwAdmin.ClientsController = Ember.ObjectController.extend({
+SgwAdmin.ClientController = Ember.ObjectController.extend({
   isActive: false
 });
