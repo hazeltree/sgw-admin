@@ -1,7 +1,21 @@
 <div id="request">
   <nav class="bar">
-    {{#link-to 'index' class="deny"}}&lsaquo; Requests{{/link-to}}
-    {{#link-to 'index' class="confirm"}}Edit{{/link-to}}
+    {{#link-to 'requests' class="deny"}}&lsaquo; Requests{{/link-to}}
+    {{#link-to 'request.edit' class="confirm"}}Edit{{/link-to}}
   </nav>
-request
+
+id: {{id}}
+<br>first name: {{firstName}}
+<br>email: {{email}}
+<br>phone: {{primaryPhone}}
+<br>design: {{design}}
+<br>stock: {{stock}}
+<br>height: {{height}}
+<br>width: {{width}}
+<br>description: {{description}}
+<br>image: {{image}}
+<br>installation: {{installation}}
+<br>framing: {{framing}}
+<br>date: {{date}}
+
 </div>

@@ -7,6 +7,9 @@ SgwAdmin.Employee.FIXTURES = [
   {
     id: 1,
     firstName: 'Steven',
-    lastName: 'Valladolid'
+    lastName: 'Valladolid',
+    fullName: function() {
+      return this.get('firstName') + ' ' + this.get('fullName');
+    }.property('firstName','fullName')
   }
 ];

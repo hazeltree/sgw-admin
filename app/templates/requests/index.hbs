@@ -1,1 +1,39 @@
-{{#each}}{{id}}{{/each}}
+<div id="requests">
+
+<div class="table-header">
+  <div class="row">
+    <div class="small-2 columns">
+      ID
+    </div>
+    <div class="small-4 columns">
+      Name
+    </div>
+    <div class="small-3 columns">
+      Email
+    </div>
+    <div class="small-3 columns">
+      Date
+    </div>
+  </div>
+</div>
+
+{{#each}}
+{{#link-to 'request' id tagName='div' class="table-row"}}
+    <div class="small-2 columns">
+      {{id}}
+    </div>
+    <div class="small-4 columns">
+      {{firstName}}
+    </div>
+    <div class="small-3 columns">
+      {{email}}
+    </div>
+    <div class="small-3 columns">
+      {{date}}
+      {{!--{{format-date date}}--}}
+    </div>
+{{/link-to}}
+
+{{/each}}
+
+</div>
