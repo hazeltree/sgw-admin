@@ -53,6 +53,19 @@ $icon-font-path: "../styles/fonts/"; // Change the path to the fonts
 }
 
 
+nav.bar {
+  background: #484b52;
+  color: white;
+  padding: 16px;
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  .confirm {
+    float: right;
+  }
+}
+
 .table-header {
   background: #484b52;
   color: white;
