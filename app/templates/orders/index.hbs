@@ -1,6 +1,10 @@
 <div id="orders">
 
-<div class="table-header">
+  <nav class="bar">
+    Order
+    <a {{action 'createOrder'}} class="confirm">New Order</a>
+  </nav>
+{{!--<div class="table-header">
   <div class="row">
     <div class="small-2 columns">
       ID
@@ -15,7 +19,7 @@
       Date
     </div>
   </div>
-</div>
+</div>--}}
 
 {{#each}}
 {{#link-to 'order' id tagName='div' class="table-row"}}

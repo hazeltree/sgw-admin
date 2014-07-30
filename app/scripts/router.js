@@ -15,4 +15,5 @@ SgwAdmin.Router.map(function () {
       this.route('edit');
     });
   });
+  this.resource('shippingCompanies');
 });

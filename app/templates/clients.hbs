@@ -1,6 +1,11 @@
-<div id="customers">
+<div id="clients">
 
-<div class="table-header row">
+  <nav class="bar">
+    Clients
+    <a {{action 'createClient'}} class="confirm">New Client</a>
+  </nav>
+
+{{!--<div class="table-header row">
     <div class="small-4 columns">
       <span>Name</span>
     </div>
@@ -10,7 +15,7 @@
     <div class="small-4 columns">
       <span>Email</span>
     </div>
-</div>
+</div>--}}
 
 {{#each}}
 <!--{{californian}}-->

@@ -1,9 +1,24 @@
-<div id="order">
+<div id="order-edit">
   <nav class="bar">
-    {{#link-to 'orders' class="deny"}}&lsaquo; Orders{{/link-to}}
-    {{#link-to 'order.edit' class="confirm"}}Edit{{/link-to}}
+    {{#link-to 'order' class="deny"}}Cancel{{/link-to}}
+    <a class="confirm" {{action 'save'}}>Save</a>
   </nav>
 
-edit
+  id: {{id}}
+  <br>client: {{client.fullName}}
+  <br>height: {{input value=height}}
+  <br>width: {{input value=width}}
+  <br>privacy: <label>{{input type="checkbox" checked=privacy}} Yes</label>
+  <br>frameCost: ${{input value=frameCost}}
+  <br>crateCost: ${{input value=crateCost}}
+  <br>taxCost: ${{input value=taxCost}}
+  <br>shipCost: ${{input value=shipCost}}
+  <br>shippingCompany: {{view Ember.Select content=shippingCompanies value=shippingCompany optionLabelPath="content.name"}}
+  <br>totalCost: ${{input value=totalCost}}
+  <br>deposit: ${{input value=deposit}}
+  <br>balance: ${{input value=balance}}
+  <br>date: {{input value=date type="date"}}
+
+  <button {{action 'deleteOrder'}} class="deleteButton">Delete</button>
 
 </div>

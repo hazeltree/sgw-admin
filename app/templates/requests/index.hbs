@@ -1,39 +1,47 @@
 <div id="requests">
 
-<div class="table-header">
+  <nav class="bar">
+    Requests
+    <a {{action 'openModal' 'request.new'}} class="confirm">New Request</a>
+  </nav>
+{{!--<div class="table-header">
   <div class="row">
-    <div class="small-2 columns">
+    <div class="small-1 columns">
       ID
     </div>
-    <div class="small-4 columns">
+    <div class="small-3 columns">
       Name
     </div>
-    <div class="small-3 columns">
+    <div class="small-4 columns">
       Email
     </div>
     <div class="small-3 columns">
       Date
     </div>
+    <div class="small-1 column">
+      + Add
+    </div>
   </div>
-</div>
+</div>--}}
 
-{{#each}}
-{{#link-to 'request' id tagName='div' class="table-row"}}
-    <div class="small-2 columns">
-      {{id}}
-    </div>
-    <div class="small-4 columns">
-      {{firstName}}
-    </div>
-    <div class="small-3 columns">
-      {{email}}
-    </div>
-    <div class="small-3 columns">
-      {{date}}
-      {{!--{{format-date date}}--}}
-    </div>
-{{/link-to}}
+  {{#each}}
 
-{{/each}}
+    {{#link-to 'request' id tagName='div' class="table-row"}}
+        <div class="small-1 columns">
+          {{id}}
+        </div>
+        <div class="small-3 columns">
+          {{firstName}}
+        </div>
+        <div class="small-4 columns">
+          {{email}}
+        </div>
+        <div class="small-4 columns">
+          {{date}}
+          {{!--{{format-date date}}--}}
+        </div>
+    {{/link-to}}
+
+  {{/each}}
 
 </div>

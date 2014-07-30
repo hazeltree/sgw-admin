@@ -1,45 +1,54 @@
 <div id="quotes">
 
-<div class="table-header">
-  <div class="row">
-    <div class="small-1 columns">
-      ID
+  <nav class="bar">
+    Quotes
+    <a {{action 'createQuote'}} class="confirm">New Quote</a>
+  </nav>
+  {{!--Add
+  <div class="table-header">
+    <div class="row">
+      <div class="small-1 columns">
+        ID
+      </div>
+      <div class="small-2 columns">
+        Name
+      </div>
+      <div class="small-3 columns">
+        Email
+      </div>
+      <div class="small-3 columns">
+        Sender
+      </div>
+      <div class="small-2 columns">
+        Date
+      </div>
+      <div class="small-1 column">
+        + Add
+      </div>
     </div>
-    <div class="small-3 columns">
-      Name
-    </div>
-    <div class="small-3 columns">
-      Email
-    </div>
-    <div class="small-3 columns">
-      Sender
-    </div>
-    <div class="small-2 columns">
-      Date
-    </div>
-  </div>
-</div>
+  </div>--}}
 
-{{#each}}
-{{#link-to 'request' id tagName='div' class="table-row"}}
-    <div class="small-1 columns">
-      {{id}}
-    </div>
-    <div class="small-3 columns">
-      {{firstName}}
-    </div>
-    <div class="small-3 columns">
-      {{email}}
-    </div>
-    <div class="small-3 columns">
-      {{sender.firstName}} {{sender.lastName}}
-    </div>
-    <div class="small-2 columns">
-      {{date}}
-      {{!--{{format-date date}}--}}
-    </div>
-{{/link-to}}
+  {{#each}}
 
-{{/each}}
+    {{#link-to 'quote' id tagName='div' class="table-row"}}
+      <div class="small-1 columns">
+        {{id}}
+      </div>
+      <div class="small-2 columns">
+        {{firstName}}
+      </div>
+      <div class="small-3 columns">
+        {{email}}
+      </div>
+      <div class="small-3 columns">
+        {{sender.firstName}} {{sender.lastName}}
+      </div>
+      <div class="small-3 columns">
+        {{date}}
+        {{!--{{format-date date}}--}}
+      </div>
+    {{/link-to}}
+
+  {{/each}}
 
 </div>

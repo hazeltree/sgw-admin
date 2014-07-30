@@ -1,0 +1,23 @@
+<div id="request-edit">
+  <nav class="bar">
+    {{#link-to 'request' class="deny"}}Cancel{{/link-to}}
+    <a class="confirm" {{action 'saveRequest'}}>Save</a>
+  </nav>
+
+  id: {{id}}
+  <br>first name: {{firstName}}
+  <br>email: {{email}}
+  <br>phone: {{primaryPhone}}
+  <br>design: {{design}}
+  <br>stock: {{stock}}
+  <br>height: {{height}}
+  <br>width: {{width}}
+  <br>description: {{description}}
+  <br>image: {{image}}
+  <br>installation: {{installation}}
+  <br>framing: {{framing}}
+  <br>date: {{date}}
+
+  <button {{action 'deleteRequest'}} class="deleteButton">Delete</button>
+
+</div>
