@@ -1,0 +1,10 @@
+<div id="modal-overlay">
+  <div id="modal">
+    <h1>New Client</h1>
+    {{input value=firstName placeholder="First Name"}}
+    {{input value=lastName placeholder="Last Name"}}
+    {{input value=email placeholder="Email address"}}
+    <br><br>
+    <button {{action 'closeModal'}}>Cancel</button><button {{action 'saveClient'}}>Save</button>
+  </div>
+</div>

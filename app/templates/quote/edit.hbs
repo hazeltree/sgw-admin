@@ -3,20 +3,20 @@
     {{#link-to 'quote' class="deny"}}Cancel{{/link-to}}
     <a class="confirm" {{action 'save'}}>Save</a>
   </nav>
+  <div class="content">
+    sender: {{sender.firstName}} {{sender.lastName}}
+    <br>date: {{date}}
+    <br>firstName: {{input value=firstName}}
+    <br>email: {{input value=email}}
+    <br>pattern: {{input value=pattern}}
+    <br>size: {{input value=size}}
+    <br>squareFeet: {{input value=squareFeet}}
+    <br>squareFootPrice: ${{input value=squareFootPrice}}
+    <br>totalCost: ${{input value=totalCost}}
+    <br>temperedGlass: {{input value=temperedGlass}}
+    <br>framing: {{input value=framing}}
+    <br>misc: {{input value=misc}}
 
-  sender: {{sender.firstName}} {{sender.lastName}}
-  <br>date: {{date}}
-  <br>firstName: {{input value=firstName}}
-  <br>email: {{input value=email}}
-  <br>pattern: {{input value=pattern}}
-  <br>size: {{input value=size}}
-  <br>squareFeet: {{input value=squareFeet}}
-  <br>squareFootPrice: ${{input value=squareFootPrice}}
-  <br>totalCost: ${{input value=totalCost}}
-  <br>temperedGlass: {{input value=temperedGlass}}
-  <br>framing: {{input value=framing}}
-  <br>misc: {{input value=misc}}
-
-  <button {{action 'deleteQuote'}} class="deleteButton">Delete</button>
-
+    <button {{action 'deleteQuote'}} class="deleteButton">Delete</button>
+  </div>
 </div>

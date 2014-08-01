@@ -1,3 +1,47 @@
+.clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.content {
+  @extend .clearfix;
+  max-width: 800px;
+}
+
+#quotes, #requests, #orders {
+  .table-row {
+    @extend .clearfix;
+    &:hover {
+      background: rgba(0,0,0,0.05);
+    }
+    border-bottom: 1px solid rgba(0,0,0,.15);
+  }
+}
+#quote, #request, #order, #quote-edit, #request-edit, #order-edit, #dashboard {
+  .content {
+    padding: 20px;
+  }
+}
+
+table.itemized td {
+  border: 1px dashed;
+  padding: 4px 8px;
+  font-size: 14px;
+}
+
+html {
+  background: url(https://amyorangejuice.files.wordpress.com/2014/03/dragon-fly-and-bamboo-detail.jpg);
+}
+
+body {
+  max-width: 1440px;
+  margin: 0px auto!important;
+  background: rgba(255,255,255,.9)!important;
+}
+
 $icon-font-path: "../styles/fonts/"; // Change the path to the fonts
 
 .deleteButton {
@@ -6,7 +50,7 @@ $icon-font-path: "../styles/fonts/"; // Change the path to the fonts
 
 @import url(http://fonts.googleapis.com/css?family=Volkhov:400,700|Open+Sans:300,400,300italic,700);
 
-#modal-wrap {
+#modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -17,9 +61,19 @@ $icon-font-path: "../styles/fonts/"; // Change the path to the fonts
 }
 
 #modal {
-  height: 50%;
-  width: 50%;
   background: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+    -webkit-transform: translate(-50%, -60%);
+      -ms-transform: translate(-50%, -60%); // IE9+
+          transform: translate(-50%, -60%);
+
+  h1 {
+    padding: 0px;
+    margin: 0;
+  }
+  padding: 20px;
 }
 
 #nav {
@@ -97,7 +151,7 @@ nav.bar {
 
 #clients {
   .name {
-    font-family: 'Volkhov';
+    /*font-family: 'Volkhov';*/
     font-weight: 700;
     color: rgb(100,100,100);
   }

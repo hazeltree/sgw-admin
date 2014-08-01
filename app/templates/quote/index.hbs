@@ -3,18 +3,19 @@
     {{#link-to 'quotes' class="deny"}}&lsaquo; Quotes{{/link-to}}
     {{#link-to 'quote.edit' class="confirm"}}Edit{{/link-to}}
   </nav>
-
-  sender: {{sender.firstName}} {{sender.lastName}}
-  <br>date: {{date}}
-  <br>firstName: {{firstName}}
-  <br>email: {{email}}
-  <br>pattern: {{pattern}}
-  <br>size: {{size}}
-  <br>squareFeet: {{squareFeet}}
-  <br>squareFootPrice: {{squareFootPrice}}
-  <br>totalCost: {{totalCost}}
-  <br>temperedGlass: {{temperedGlass}}
-  <br>framing: {{framing}}
-  <br>misc: {{misc}}
+  <div class="content">
+    Seny by: {{sender.firstName}} {{sender.lastName}}
+    <br>Date: {{date}}
+    <br>Name: {{firstName}}
+    <br>Email: {{email}}
+    <br>Pattern: {{pattern}}
+    <br>Size: {{size}}
+    <br>Sqft: {{squareFeet}}
+    <br>Sqft Price: ${{squareFootPrice}}
+    <br>Total: ${{totalCost}}
+    <br>Tempered Glass: {{temperedGlass}}
+    <br>Framing: {{framing}}
+    <br>misc: {{misc}}
+  </div>
 
 </div>

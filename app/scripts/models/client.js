@@ -4,7 +4,7 @@ SgwAdmin.Client = DS.Model.extend({
   primaryPhone: DS.attr('string'),
   alternatePhone: DS.attr('string'),
   email: DS.attr('string'),
-  companyName: DS.attr('stirng'),
+  companyName: DS.attr('string'),
   shippingAddress: DS.belongsTo('address'),
   billingAddress: DS.belongsTo('address'),
   californian: DS.attr('boolean'),

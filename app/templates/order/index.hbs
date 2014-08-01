@@ -3,20 +3,20 @@
     {{#link-to 'orders' class="deny"}}&lsaquo; Orders{{/link-to}}
     {{#link-to 'order.edit' class="confirm"}}Edit{{/link-to}}
   </nav>
-
-id: {{id}}
-<br>client: {{client.fullName}}
-<br>height: {{height}}
-<br>width: {{width}}
-<br>privacy: {{privacy}}
-<br>frameCost: ${{frameCost}}
-<br>crateCost: ${{crateCost}}
-<br>taxCost: ${{taxCost}}
-<br>shipCost: ${{shipCost}}
-<br>shippingCompany: {{shippingCompany.name}}
-<br>totalCost: ${{totalCost}},
-<br>deposit: ${{deposit}},
-<br>balance: ${{balance}},
-<br>date: {{date}}
+  <div class="content"> 
+    <br>Client: {{client.fullName}}
+    <br>Height: {{height}}"
+    <br>Width: {{width}}"
+    <br>Privacy: {{privacy}}
+    <br>Frame Cost: ${{frameCost}}
+    <br>Crate Cost: ${{crateCost}}
+    <br>Tax Cost: ${{taxCost}}
+    <br>Shipping Cost: ${{shipCost}}
+    <br>ShippingCompany: {{shippingCompany.name}}
+    <br>TotalCost: ${{totalCost}}
+    <br>Deposit: ${{deposit}}
+    <br>Balance: ${{balance}}
+    <br>Date: {{date}}
+  </div>
 
 </div>

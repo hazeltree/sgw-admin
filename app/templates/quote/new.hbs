@@ -1,0 +1,43 @@
+<div id="modal-overlay">
+  <div id="modal">
+    <p>Yes, we can build you a window according to your {{requested.width}}" W x {{requested.height}}" H specifications{{#if requested.stock}}, modeled after your requested pattern {{requested.stock}}{{else}}.{{/if}}</p>
+    <p>This quote reflects an actual-stained-glass charge for {{glassSquareFootage}} square feet of glass. This represents our discounted price of [$$$] per square foot. Any additional services and costs are listed below.</p>
+    <p>This quote includes redrawing/designing the pattern within your specs as well as complete construction.</p>
+    <p>Any window not fitted with tempered glass is strengthened with an industry-standard, metal brace bar.</p>
+    <p>Your itemized costs are as follows:</p>
+
+    <table class="itemized">
+      <tr>
+        <td>Stained glass window cost</td><td>{{input value=420}}</td>
+      </tr>
+      <tr>
+        <td>Tempered Glass (insulated unit)</td><td>None</td>
+      </tr>
+      <tr>
+        <td>Framing</td><td>Standard brace bar with or without hooks</td>
+      </tr>
+      <tr>
+        <td>Total cost</td><td>{{input}}</td>
+      </tr>
+      <tr colspan="2">
+        <td>Notes</td><td>{{textarea}}</td>
+      </tr>
+    </table>
+
+
+    <p>All we require is a 50% deposit to start and the balance will be due once we send you a digital picture of the finished window for your approval. Shipping is additional and will depend on your zipcode.</p>
+
+    <p>Most orders are completed within 28 business days or less.</p>
+    <p>Remember, if you don't find a pattern that catches your eye, we can easily create a pattern from scratch or duplicate any existing pattern you might have seen elsewhere.</p>
+
+    <p>Thanks again,</p>
+
+    <p>Raeanon (Rae) Schmid<br>
+    Ph (619) 575-2904<br>
+    Fax (619) 575-2919<br>
+    Raeanonw@aol.com<br>
+    www.LeadAndFoil.com<br>
+    </p>
+    <button {{action 'closeModal'}}>Cancel</button>
+  </div>
+</div>

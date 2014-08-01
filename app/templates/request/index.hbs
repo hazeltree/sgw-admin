@@ -1,21 +1,20 @@
 <div id="request">
   <nav class="bar">
     {{#link-to 'requests' class="deny"}}&lsaquo; Requests{{/link-to}}
-    {{#link-to 'request.edit' class="confirm"}}Edit{{/link-to}}
+    <a class="confirm" {{action 'openModal' 'quote.new'}}>Send Quote</a>
   </nav>
-
-id: {{id}}
-<br>first name: {{firstName}}
-<br>email: {{email}}
-<br>phone: {{primaryPhone}}
-<br>design: {{design}}
-<br>stock: {{stock}}
-<br>height: {{height}}
-<br>width: {{width}}
-<br>description: {{description}}
-<br>image: {{image}}
-<br>installation: {{installation}}
-<br>framing: {{framing}}
-<br>date: {{date}}
-
+  <div class="content">
+    <br>Name: {{firstName}}
+    <br>Email: {{email}}
+    <br>Phone: {{primaryPhone}}
+    <br>Design: {{design}}
+    <br>Stock: {{stock}}
+    <br>Height: {{height}}
+    <br>Width: {{width}}
+    <p>Description: {{description}}</p>
+    <p>Image:<br><img style="max-height: 300px;" {{bind-attr src=image}}></p>
+    Installation: {{installation}}
+    <br>Framing: {{framing}}
+    <br>Date: {{date}}
+  </div>
 </div>

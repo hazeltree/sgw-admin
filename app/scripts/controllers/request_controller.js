@@ -1,0 +1,1 @@
+SgwAdmin.RequestController = Ember.ObjectController.extend();
